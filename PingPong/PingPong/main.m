@@ -19,6 +19,7 @@ int main(int argc, const char * argv[]) {
     
     int Player1 = 0;
     int Player2 = 0;
+    NSString * winner;
     
     
     while((Player1 < 21 && Player2 < 21) || ((Player1-Player2)*(Player1-Player2) < 4))
@@ -33,15 +34,9 @@ int main(int argc, const char * argv[]) {
     
     NSLog(@"Final Score: %d to %d", Player1, Player2);
     
-    if(Player1 > Player2)
-    {
-        NSLog(@"Player 1 wins!");
-    }
-    else
-    {
-        NSLog(@"Player 2 wins!");
-    }
+    winner = Player1 > Player2 ? @"Player 1" : @"Player 2";
     
+        NSLog(@"%@ wins!", winner);
     
     
     return 0;
